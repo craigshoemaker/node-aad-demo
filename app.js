@@ -39,7 +39,7 @@ const   express         = require('express')
 
 const loggedInUsers = [];
 
-const findUser = function (oid, callback) {
+const findUser = (oid, callback) => {
   const user = loggedInUsers.find((user) => user.oid === oid);
   return callback(null, user);
 };
@@ -86,7 +86,7 @@ passport.use(new OIDCStrategy(config.creds,
     }
 
     // asynchronous verification, for effect...
-    process.nextTick(function () {
+    process.nextTick(() => {
       findUser(profile.oid, (err, user) => {
 
         if (err) {
@@ -206,7 +206,7 @@ app.post('/auth/openid/return',
 
 // 'logout' route, logout from passport, and destroy the session with AAD.
 app.get('/logout', (req, res) => {
-  req.session.destroy(function(err) {
+  req.session.destroy((err) => {
     req.logOut();
     res.redirect(config.destroySessionUrl);
   });
