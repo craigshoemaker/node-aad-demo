@@ -149,6 +149,10 @@ app.get('/', (req, res) => {
   res.render('index', { user: req.user, userString: userString });
 });
 
+app.get('/api', ensureAuthenticated, (req, res) => {
+  res.send({ message: 'Respone from API endpoint'});
+});
+
 app.get('/login', 
   (req, res, next) => {
 
