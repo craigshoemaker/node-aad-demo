@@ -1,0 +1,15 @@
+{
+  "name": "node-azure-active-directory",
+  "version": "0.0.1",
+  "dependencies": {
+    "assert-plus": "^1.0.0",
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^3.21.2",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.14.1",
+    "method-override": "^2.3.6",
+    "passport": "*",
+    "passport-azure-ad": "^3.0.6"
+  }
+}
