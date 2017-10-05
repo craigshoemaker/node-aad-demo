@@ -150,7 +150,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api', ensureAuthenticated, (req, res) => {
-  res.send({ message: 'Respone from API endpoint'});
+  res.send({ message: 'Response from API endpoint'});
 });
 
 app.get('/login', 
